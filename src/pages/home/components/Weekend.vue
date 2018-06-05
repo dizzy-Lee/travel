@@ -3,8 +3,8 @@
     <div class="title">周末去哪儿</div>
     <ul>
       <li class="item border-bottom" 
-        v-for="item of recommendList"
-        :key="item.id"
+          v-for="item of list"
+          :key="item.id"
       >
         <div class="item-img-wrapper">
           <img class="item-img" :src="item.imgUrl" />
@@ -21,35 +21,8 @@
 <script>
 export default {
   name: 'HomeWeekend',
-  data () {
-    return {
-        recommendList: [{
-        id: '0001',
-        imgUrl: 'http://img1.qunarzz.com/sight/source/1509/af/3cc305d8805829.jpg_r_640x214_d65831b4.jpg',
-        title: '保定必游TOP10',
-        desc: '感受保定这座小城的青春活力'
-      }, {
-        id: '0002',
-        imgUrl: 'http://img1.qunarzz.com/sight/source/1509/af/3cc305d8805829.jpg_r_640x214_d65831b4.jpg',
-        title: '保定必游TOP10',
-        desc: '感受保定这座小城的青春活力'
-      }, {
-        id: '0003',
-        imgUrl: 'http://img1.qunarzz.com/sight/source/1509/af/3cc305d8805829.jpg_r_640x214_d65831b4.jpg',
-        title: '保定必游TOP10',
-        desc: '感受保定这座小城的青春活力'
-      }, {
-        id: '0004',
-        imgUrl: 'http://img1.qunarzz.com/sight/source/1509/af/3cc305d8805829.jpg_r_640x214_d65831b4.jpg',
-        title: '保定必游TOP10',
-        desc: '感受保定这座小城的青春活力'
-      }, {
-        id: '0005',
-        imgUrl: 'http://img1.qunarzz.com/sight/source/1509/af/3cc305d8805829.jpg_r_640x214_d65831b4.jpg',
-        title: '保定必游TOP10',
-        desc: '感受保定这座小城的青春活力'
-      }]
-    }
+  props: {
+    list: Array
   }
 }
 </script>
@@ -57,7 +30,6 @@ export default {
 <style lang="stylus" scoped>
   @import '~styles/mixins.styl'
   .title
-    margin-top: .2rem
     line-height: .8rem
     background: #eee
     text-indent: .2rem

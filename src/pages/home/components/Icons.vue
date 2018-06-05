@@ -90,7 +90,7 @@ export default {
       float: left
       padding-bottom: 25%
       .icon-img
-        position: absolute 
+        position: absolute
         top: 0
         left: 0
         right: 0

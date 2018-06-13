@@ -28,7 +28,7 @@ export default {
     return {
       sightName: '',
       bannerImg: '',
-      gallaryImgs: '',
+      gallaryImgs: [],
       list: []
     }
   },
